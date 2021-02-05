@@ -1,0 +1,168 @@
+/* SECTION_2 */
+
+.container-img-chapter {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+}
+
+.img-chapter {
+    opacity: 0;
+}
+
+/*---------------------------STORY------------------------*/
+.story {
+    position: absolute;
+    float: right;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    height: 68vh;
+    width: 40vw;
+    padding: 30px;
+    top: 10vh;
+    border-bottom-left-radius: 50px;
+    -webkit-box-shadow: 8px -5px 17px 5px #000000;
+    box-shadow: 8px -5px 17px 5px #000000;
+
+}
+
+#big-map .story{
+    height: auto;
+    width: 20vw;
+    top: 10vh;
+    flex-direction: row;
+    border-bottom-left-radius: 50px;
+    -webkit-box-shadow: 8px -5px 17px 5px #000000;
+    box-shadow: 8px -5px 17px 5px #000000;
+    text-align: center;
+    padding: 10px;
+    align-items: center;
+
+}
+
+#big-map h3 {
+    position: relative;
+    padding-bottom: 0;
+    border-bottom: 0;
+    margin: 0 5px 0 5px;
+}
+
+.divider-map{
+    height: 2px;
+    width: 100%;
+    background-color: #bc8861;
+}
+
+.story > h3 {
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: #bc8861 solid 10px;
+}
+
+.story > p {
+    position: relative;
+    margin: 10px 0;
+}
+
+.story > .little-img-container {
+    position: relative;
+    border-bottom-left-radius: 50px;
+    height: 65%;
+    width: 100%;
+    background-size: cover;
+}
+
+#chapter-img-1 {
+    background-image: url("../images/bg-dofus-1.jpg");
+}
+
+#chapter-img-2 {
+    background-image: url("../images/bg-dofus-2.jpg");
+}
+
+#chapter-img-3 {
+    background-image: url("../images/bg-dofus-3.jpg");
+}
+
+
+/*-----------------------TARGET----------------------------*/
+
+#chapter-1, #chapter-2, #chapter-3, #big-map {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+#chapter-1:target, #chapter-2:target, #chapter-3:target, #big-map:target {
+    position: relative;
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+    display: flex;
+}
+
+
+#chapter-1:target .img-chapter, #chapter-2:target .img-chapter, #chapter-3:target .img-chapter, #big-map:target .img-chapter{
+    opacity: 1;
+    transition: opacity 1s ease-out 0.25s;
+}
+
+.container-big-info{
+    display: flex;
+    justify-content: center;
+    object-fit: scale-down;
+
+}
+
+.container-big-info img{
+    padding-top: 2vh;
+    height: 85vh;
+    border-radius: 50px;
+}
+
+
+/*--------------------------------Return-Home----------------------------------*/
+.home-button {
+    position: absolute;
+    display: flex;
+    right: 1vw;
+    bottom: 1vh;
+    background-color: white;
+    width: 4vw;
+    height: 4vw;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    border-radius: 50px;
+    z-index: 10;
+    opacity: 0.4;
+    color: #bc8861;
+}
+
+.home-button:hover{
+    opacity: 1;
+}
+
+/*----------------------------Animation SECTION_2------------------------------------*/
+
+#chapter-1:target .story, #chapter-2:target .story, #chapter-3:target .story, #big-map:target .story{
+    animation-name: story;
+    animation-duration: 0.5s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-delay: 0.80s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes story {
+    from {
+        transform: translateX(1000px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+

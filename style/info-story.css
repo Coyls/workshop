@@ -1,0 +1,334 @@
+/*---------------------------- info-story ------------------------------------*/
+
+#container-info {
+    position: absolute;
+    right: 0;
+    top: 7vh;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.info {
+    transition: width ease-out 0.5s 0.5s, border-bottom-left-radius 0.5s 0.5s;
+
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+
+    height: 8vh;
+    width: 8vh;
+
+    right: 0;
+    background-color: #fff;
+    background-size: contain;
+    background-repeat: repeat;
+    border-radius: 5px;
+    margin: 1vh;
+
+}
+
+.info:hover {
+    transition: width ease-out 0.5s 0.5s, border-bottom-left-radius 0.5s 0.5s;
+
+    width: 46.5vw;
+    border-bottom-left-radius: 0;
+
+}
+
+
+
+.container-icon-info {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    width: 8vh;
+    right: 0;
+
+    font-size: 4vh;
+    border-radius: 5px;
+
+
+}
+
+/*----------------------- container-wrapper-info -----------------------*/
+.info-content {
+    transition: width ease-out 0.5s 1s;
+
+    height: 100%;
+    width: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+}
+
+
+.info:hover .info-content {
+    transition: width ease-out;
+    width: 100%;
+
+    overflow: visible;
+}
+
+.container-wrapper-info {
+    transition: height ease-out 0.5s 0.25s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 0;
+    overflow: hidden;
+
+}
+
+.info:hover .container-wrapper-info {
+    transition: height ease-out 0.5s 1s;
+
+    height: 100%;
+}
+
+.title-wrapper {
+    transition: opacity ease-out 0.5s 0.25s;
+
+    opacity: 0;
+}
+
+.info:hover .title-wrapper {
+    transition: opacity ease-out 0.5s 1s;
+
+    opacity: 1;
+}
+
+.info:hover .divider {
+    animation-duration: 0.25s;
+    animation-delay: 1.25s;
+    animation-timing-function: ease-out;
+}
+
+/*------------------------------ vertical-info -----------------------------------*/
+
+
+.vertical-info {
+    transition: height ease-out 0.5s, padding-left ease-out 0.1s 0.49s, padding-bottom ease-out 0.1s 0.49s, padding-right ease-out 0.25s, padding-top ease-out 0.25s;
+
+    position: absolute;
+    width: min-content;
+    height: auto;
+    background-color: #FBFCFC;
+    background-size: cover;
+    border-radius: 0 0 5px 5px;
+    top: 8vh;
+    overflow: hidden;
+}
+
+
+.info:hover .vertical-info {
+   transition: padding-bottom ease-out 0.1ms 1s, padding-top ease-out 0.1ms 1s;
+
+    z-index: 100;
+    padding: 1vh 2vh 2vh 2vh;
+}
+
+#info-1  {
+    background-image: url("../images/fond_character.jpg");
+}
+
+#info-2 {
+    background-image: url("../images/fond_monster.jpg");
+}
+
+#info-3 {
+    background-image: url("../images/fond_map.jpg");
+}
+
+.info:hover .vertical-info {
+
+    height: auto;
+}
+
+/*-------------------------------- vertical-character --------------------------------*/
+#vertical-character {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 35vw;
+    justify-content: space-evenly;
+    object-fit: scale-down;
+
+}
+
+.character-container{
+    transition: height ease-out 1s;
+    display: flex;
+    align-items: flex-start;
+
+    width: 14vw;
+    height: auto;
+    overflow: hidden;
+    border-radius: 5px;
+
+}
+
+.character-container > img {
+    transition: height ease-out 0.5s;
+
+    height: 0;
+
+    position: relative;
+    width: 14vw;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.info:hover .character-container > img {
+
+    transition: height ease-out 0.5s 1s;
+
+    height: 6vw;
+}
+
+.info:hover .character-container {
+    transition: margin-bottom 0.1s 1s;
+
+    height: auto;
+    margin-bottom: 0.5vh;
+}
+
+
+.character-container > img:hover {
+    transform: scale(1.1,1.1);
+    overflow: hidden;
+}
+
+/*-------------------------------- vertical-monster --------------------------------*/
+#vertical-monster {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    width: 40vw;
+
+
+}
+
+#stp{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    width: 40vw;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+
+.monster-container {
+    transition: height ease-out 0.5s;
+    height: 0;
+    width: 15vh;
+    background-image: url("../images/fond.png");
+    background-size: contain;
+    object-fit: scale-down;
+    border-radius: 5px;
+
+}
+
+.info:hover .monster-container{
+    transition: height ease-out 0.5s 1s, margin-bottom 0.1s ease-out 1s;
+    height: 15vh;
+    margin-bottom: 0.5vh;
+}
+
+
+
+.monster-container > img {
+    transition: height ease-out 0.5s;
+    position: absolute;
+    height: 0;
+}
+
+.info:hover .monster-container >img {
+    transition: height ease-out 0.5s 1s;
+    height: 15vh;
+}
+
+.monster-container:hover > img {
+    transform: scale(1.1,1.1);
+}
+
+/*-------------------------------- vertical-map --------------------------------*/
+#vertical-map {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    width: auto;
+    height: auto;
+
+}
+
+#map {
+    transition: width ease-out 0.5s, height ease-out 0.5s;
+
+    height: 0;
+    width: 0;
+    position: relative;
+    object-fit: scale-down;
+    border-radius: 5px;
+}
+
+.info:hover #map{
+    transition: width ease-out 0.5s 1s;
+    width: 39vw;
+    height: 100%;
+}
+
+/*---------------------------- Info-Animation ------------------------------------*/
+
+.info {
+    animation-name: info-apparition;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+}
+
+#info-map {
+    animation-delay: 2.5s;
+}
+
+#info-monster {
+    animation-delay: 2.75s;
+}
+
+#info-character {
+    animation-delay: 3s;
+}
+
+@keyframes info-apparition {
+    0% {
+        transform-origin: 50% 50%;
+        transform: scale(0.1, 0.1) translateY(-4000px);
+
+    }
+    80% {
+        transform-origin: 50% 50%;
+        transform: scale(0.1, 0.1) translateY(0);
+
+
+    }
+    100% {
+        transform-origin: 50% 50%;
+        transform: scale(1, 1) translateY(0);
+    }
+}

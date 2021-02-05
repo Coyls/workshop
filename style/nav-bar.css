@@ -1,0 +1,147 @@
+/* NAV-BAR */
+
+#nav-bar {
+    margin: 1vh 1vw;
+    position: sticky;
+    height: 8vh;
+    width: auto;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    bottom: 5vh;
+}
+
+
+.nav-button {
+    background-color: #402220;
+    position: relative;
+    height: auto;
+    width: 30vw;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.align-left {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.hover-button {
+    transition: width ease-out 0.25s;
+    position: relative;
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+}
+
+.nav-p{
+    position: relative;
+}
+
+.nav-description {
+    position: relative;
+    color: black;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+
+}
+
+/*----------------------------.nav-button:hover------------------------------------*/
+
+.nav-button:hover .hover-button {
+    transition: width ease-out 0.25s;
+    position: absolute;
+    width: 30vw;
+    background-color: #fff;
+}
+
+.nav-button:hover .nav-p {
+    color: #000;
+}
+
+.nav-button:hover .divider{
+    animation-duration: 0.15s;
+    animation-timing-function: linear;
+    animation-delay: 0.15s;
+}
+
+.nav-button:hover .nav-description {
+    height: auto;
+    width: auto;
+    color: #000;
+
+    animation-name: nav-description;
+    animation-duration: 0.15s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: backwards;
+    animation-delay: 0.45s;
+}
+
+
+
+/*----------------------------Animation NAV-BAR------------------------------------*/
+.nav-button {
+    animation-name: nav-button-apparition;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+}
+
+#nav-b1 {
+    animation-delay: 2.5s;
+}
+
+#nav-b2 {
+    animation-delay: 2.75s;
+}
+
+#nav-b3 {
+    animation-delay: 3s;
+}
+
+@keyframes nav-button-apparition {
+    0% {
+        transform-origin: 50% 50%;
+        transform: scale(0.1, 0.1);
+        margin-top: 100px;
+    }
+    80% {
+        transform-origin: 50% 50%;
+        transform: scale(0.1, 0.1);
+        margin-top: 0;
+    }
+    100% {
+        transform-origin: 50% 50%;
+        transform: scale(1, 1);
+    }
+}
+
+
+@keyframes divider {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes nav-description {
+    from {
+        height: 0;
+    }
+    to {
+        height: 35%;
+    }
+}
+

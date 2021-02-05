@@ -1,0 +1,26 @@
+/* INDEX */
+
+@import "texts.css";
+@import "nav-bar.css";
+@import "section_1.css";
+@import "info-story.css";
+@import "section_2.css";
+@import "responsive.css";
+
+html {
+    font-size: 16px;
+    word-spacing: 1px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+

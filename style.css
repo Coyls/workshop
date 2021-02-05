@@ -1,0 +1,41 @@
+a {
+    text-decoration: none
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("images/fond.png");
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+}
+
+/* Elements repeat */
+
+.nav-button:hover .divider,.info:hover .divider {
+    position: relative;
+    background-color: #bc8861;
+    height: 2px;
+    width: 70%;
+
+    animation-name: divider;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+}
+@keyframes divider {
+    from {
+        width: 0;
+    }
+    to {
+        width: 70%;
+    }
+}
+
+
